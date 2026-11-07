@@ -6,8 +6,8 @@ interface ShopTheLookProps {
 
 export const ShopTheLook: React.FC<ShopTheLookProps> = ({ locale = 'de' }) => {
   const labels = {
-    de: 'Alle Produkte entdecken', // To be updated to "Die Produkte anzeigen" (AC-8)
-    fr: 'Tout découvrir',          // To be updated to "Afficher les produits" (AC-8)
+    de: 'Alle Produkte entdecken', // To be updated to "Die Produkte anzeigen" in AC-8
+    fr: 'Tout découvrir',          // To be updated to "Afficher les produits" in AC-8
   };
 
   return (
@@ -23,12 +23,11 @@ export const ShopTheLook: React.FC<ShopTheLookProps> = ({ locale = 'de' }) => {
         </span>
       </div>
 
-      {/* Mobile breakpoint view (< 768px): where the CTA button lives */}
+      {/* Mobile breakpoint view (< 768px): Updated for AC-7 to primary button */}
       <div className="block md:hidden mt-4">
-        {/* Baseline: variant="secondary" -> Manual PR change updates to variant="primary" */}
         <button
-          className="w-full py-3 px-4 rounded-lg font-semibold bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors"
-          data-variant="secondary"
+          className="w-full py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all active:scale-[0.99]"
+          data-variant="primary"
           data-track="stl-cta-click"
         >
           {labels[locale]}
